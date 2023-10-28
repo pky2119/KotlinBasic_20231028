@@ -32,5 +32,21 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "토스트 클릭됨", Toast.LENGTH_SHORT).show()
         }
 
+        binding.btnVariable.setOnClickListener{
+            
+            // 코틀린 변수 문법 연습
+            // 내 이름 저장할 변수 (String) => 변동 가능성 있다
+            
+            var myName : String
+            
+            // 내 이름을 저장
+            myName = "박건용"
+            
+            // 이름 변경 => 용건박 (역순)
+            myName = "용건박"
+
+            Toast.makeText(this, myName, Toast.LENGTH_SHORT).show() // 용건박 문구 토스트
+        }
+        
     }
 }
