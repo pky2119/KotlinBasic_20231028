@@ -3,6 +3,7 @@ package kr.ac.wku.kotlinbasic_20231028
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import kr.ac.wku.kotlinbasic_20231028.databinding.ActivityMainBinding
 
@@ -12,8 +13,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
-
 
         binding.btnLog.setOnClickListener{
 
@@ -25,5 +24,13 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+
+        binding.btnToast.setOnClickListener {
+
+//            Toast 버튼이 클릭되면 => Toast 띄우기
+
+            Toast.makeText(this, "토스트 클릭됨", Toast.LENGTH_SHORT).show()
+        }
+
     }
 }
