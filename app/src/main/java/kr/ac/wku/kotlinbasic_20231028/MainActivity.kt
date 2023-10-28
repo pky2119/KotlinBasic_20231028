@@ -46,6 +46,14 @@ class MainActivity : AppCompatActivity() {
             myName = "용건박"
 
             Toast.makeText(this, myName, Toast.LENGTH_SHORT).show() // 용건박 문구 토스트
+
+            // 어머니 이름 : 변경 불가
+
+            val motherName : String
+            motherName = "어머니"
+
+            //어머니 이름 변경 시도
+//            motherName = "어머니2" // syntax 에러 발생 => 상수로 선언한 공간의 값을 변경 시도 :
         }
         
     }
